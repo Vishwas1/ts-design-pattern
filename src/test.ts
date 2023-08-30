@@ -1,7 +1,9 @@
-function foo(bar: string): string{
-    return 'hello ' + bar;
-}
+import { log } from "console"
+import { Creator } from './factory/factory-concept'
 
-let baz = 'ABC'
-console.log(foo(baz))
-console.log(foo(baz))
+log(Creator.createObject('a').name)
+log(Creator.createObject('b').name)
+log(Creator.createObject('c').name)
+log(Creator.createObject('e').name)
+
+
