@@ -4,3 +4,4 @@ function foo(bar: string): string{
 
 let baz = 'ABC'
 console.log(foo(baz))
+console.log(foo(baz))
