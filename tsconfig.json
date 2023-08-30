@@ -6,7 +6,8 @@
         "outDir": "dist",
         "target": "ES2015",
         "module": "CommonJS",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "noEmitOnError": true
     },
     "include": ["**/*.ts"],
 }
