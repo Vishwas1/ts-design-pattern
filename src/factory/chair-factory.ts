@@ -4,9 +4,9 @@ import MediumChair from '../tools/chair/medium-chair'
 import BigChair from '../tools/chair/big-chair'
 export default class ChairFactory {
     static getChair(size: string): IChair {
-        if(size === 'small') {
+        if(size === 'SmallChair') {
             return new SmallChair()
-        } else if(size === 'medium') {
+        } else if(size === 'MediumChair') {
             return new MediumChair()
         } else {
             return new BigChair()
