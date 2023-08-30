@@ -1,7 +1,7 @@
-import { ITable } from '../tools/table/table'
-import SmallTable from '../tools/table/small-table'
-import MediumTable from '../tools/table/medium-table'
-import BigTable from '../tools/table/big-table'
+import { ITable } from '../products/table/table'
+import SmallTable from '../products/table/small-table'
+import MediumTable from '../products/table/medium-table'
+import BigTable from '../products/table/big-table'
 export default class TableFactory {
     static getTable(size: string): ITable {
         if(size === 'SmallTable') {

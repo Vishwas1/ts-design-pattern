@@ -1,7 +1,7 @@
 import TableFactory from '../factory/table-factory'
 import ChairFactory from '../factory/chair-factory'
-import { ITable } from '../tools/table/table'
-import { IChair } from '../tools/chair/chair'
+import { ITable } from '../products/table/table'
+import { IChair } from '../products/chair/chair'
 
 
 interface IFurniture extends ITable, IChair {}
