@@ -29,7 +29,7 @@ class ConcreteProductC extends ConcreteProduct {
 }
 
 
-/// Factory class which creates classes
+/// Factory class which creates classes 
 export class Creator {
     static createObject(someProperty: string): IProduct {
         if(someProperty === 'a'){
