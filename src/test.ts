@@ -11,12 +11,14 @@ log(Creator.createObject('e').name)
 
 import ChairFactory from './factory/chair-factory'
 
-const chair = ChairFactory.getChair('large');
+const chair = ChairFactory.getChair('SmallChair');
 log(chair.getDimensions())
 
 // ---------------------------- Abstract Factory Pattern ------------------------------------
 
 import { AbstractFactory } from './abstract-factory/abstract-factory-concept'
-log(AbstractFactory.createObject('aa'))
 log(AbstractFactory.createObject('ab'))
-log(AbstractFactory.createObject('ac'))
+
+import FunitureFactory from "./abstract-factory/furniture-factory"
+log(FunitureFactory.getFurniture('BigTable'))
+log(FunitureFactory.getFurniture('SmallChair'))
