@@ -20,6 +20,7 @@ log(' Abstract Factory Pattern concepts --------------------------------')
 import { AbstractFactory } from './abstract-factory/abstract-factory-concept'
 log(AbstractFactory.createObject('ab'))
 
+log(' Abstract Factory Pattern usecases --------------------------------')
 import FunitureFactory from "./abstract-factory/furniture-factory"
 log(FunitureFactory.getFurniture('BigTable'))
 log(FunitureFactory.getFurniture('SmallChair'))
@@ -31,3 +32,20 @@ log(' Builder Pattern concepts --------------------------------')
 import { Director } from './builder/builder-concept'
 const product1 = Director.construct()
 log(product1.parts)
+
+
+log(' Builder Pattern usecases --------------------------------')
+import HouseBoatDirector from "./builder/house-boat-director";
+import CastleDirector from "./builder/castle-director";
+import IglooDirector from "./builder/igloo-director";
+
+const boatHouse = HouseBoatDirector.construct();
+const igloo = IglooDirector.construct();
+const castle = CastleDirector.construct();
+
+console.log(boatHouse.construction())
+console.log(igloo.construction())
+console.log(castle.construction())
+
+
+

@@ -20,3 +20,7 @@ To solve this, we will use `tsc -w` + `nodemon dist/test.js` with `concurrently`
 "concurrently \"tsc --watch\" \"nodemon -q dist/test.js\""
 ```
 
+https://sbcode.net/typescript/
+
+https://www.udemy.com/course/design-patterns-typescript/learn/lecture/26664364#overview
+ 

@@ -47,6 +47,9 @@ export class Director {
     static construct(){
         // note how these methods are chained and return a product
         return new Builder().buildPartA().buildPartB().buildPartC().getResult()
+
+        // We can also re-arrange in any order that because we are returning `this`
+        // return new Builder().buildPartB().buildPartC().buildPartA().getResult()
     }
 }
 
