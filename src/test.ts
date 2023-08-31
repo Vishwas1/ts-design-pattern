@@ -70,3 +70,31 @@ object3.fields[2] = 200
 log('object1: ' + JSON.stringify(object1))
 log('object3: ' + JSON.stringify(object3))
 
+log(' Prototype Design usecase --------------------------------')
+
+import Document from './prototype/document'
+
+const originalDocument = new Document('Original Doc', [
+    [1,2,3,4],
+    [5,6,7,8]
+] )
+const newdoc1 = originalDocument.clone('shallow')
+newdoc1.name = 'new_doc_1'
+newdoc1.list[1][2] = 100
+log(originalDocument)
+log(newdoc1)
+
+
+const newdoc2 = originalDocument.clone('deep')
+newdoc2.name = 'new_doc_2'
+newdoc2.list[1][2] = 200
+log(originalDocument)
+log(newdoc2)
+
+const newdoc3 = newdoc2.clone('deep')
+newdoc3.name = 'new_doc_3'
+newdoc3.list[0][1] = 1000
+log(newdoc2)
+log(newdoc3)
+
+
