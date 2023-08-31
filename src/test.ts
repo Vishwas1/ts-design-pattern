@@ -98,3 +98,30 @@ log(newdoc2)
 log(newdoc3)
 
 
+// ---------------------------- Singleton Pattern ------------------------------------
+/// Concepts
+log(' Singleton concepts --------------------------------')
+import { Singleton, Singleton2 } from './singleton/singleton-concepts'
+
+/// Way1
+const single1 = new Singleton(1, 'first') 
+const single2 = new Singleton(2, 'second') ;
+
+// Both will return 1 | first; that means our Singleton class is Singleton and no matter 
+// how many objects you create, it will only create one object
+single1.info();
+single2.info();
+
+/// Way2
+const single21 = Singleton2.getInsance()
+single21.id = 1
+single21.name = 'first'
+
+const single22 = Singleton2.getInsance() ;
+single22.id = 2
+single22.name = 'Second'
+
+single21.info();
+single22.info();
+
+
