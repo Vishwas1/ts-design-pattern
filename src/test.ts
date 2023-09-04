@@ -161,4 +161,24 @@ const decorator2 = new Decorator(decorator);
 log(decorator2.method())
 
 
+// ----------------------------  Adapter Pattern ------------------------------------
+log(' Decorator Design concepts --------------------------------')
+import { ClassA, ClassBAdapter, ClassB } from './adapter/adapter-concepts'
+
+// non adapater 
+const  items = [new ClassA(), new ClassB()]
+items.forEach(item => {
+    if(item instanceof ClassA) {
+        item.methodA()
+    } else {
+        item.methodB()
+    }
+})
+
+// with adapter 
+const  items2 = [new ClassA(), new ClassBAdapter()]
+items2.forEach(item => {
+    item.methodA()
+})
+
 
