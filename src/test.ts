@@ -147,11 +147,18 @@ game2.leaderBoard.print()
 game3.leaderBoard.print()
 
 
+// ---------------------------- Decorator Design Pattern ------------------------------------
+/// Concepts
+log(' Decorator Design concepts --------------------------------')
+import { Decorator, Component } from "./decorator/decorator-concepts"
+const component = new Component();
+log(component.method())
 
+const decorator = new Decorator(component);
+log(decorator.method())
 
-
-
-
+const decorator2 = new Decorator(decorator);
+log(decorator2.method())
 
 
 
