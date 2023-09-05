@@ -243,6 +243,29 @@ const shapeSquare = new Shape(square)
 log(`Area of Circle =` + shapeSquare.area())
 
 
+// ----------------------------  Composite Pattern ------------------------------------
+log(' Composite Design concepts --------------------------------')
+import { Leaf, Composite } from './composite/composite-concepts'
+const leafA = new Leaf('leaf-a');
+const leafB = new Leaf('leaf-b');
+
+const compositeA = new Composite('composite-a');
+compositeA.attach(leafA);
+
+
+const compositeb = new Composite('composite-b');
+compositeb.attach(leafA);
+
+compositeb.attach(compositeA)
+
+leafB.method()
+compositeb.method()
+
+
+
+
+
+
 
 
 
