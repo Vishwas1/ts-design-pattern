@@ -226,4 +226,28 @@ const interval = setInterval(() => {
 },  1000)
 
 
+// ----------------------------  Bridge Pattern ------------------------------------
+log(' Bridge Design usecase --------------------------------')
+import Shape from './bridge/shape'
+import { Circle } from './bridge/circle'
+import { Square }  from './bridge/square'
+
+const square = new Square(12,12);
+const circle = new Circle(10);
+
+const shapeCircle = new Shape(circle)
+log(`Area of Circle =` + shapeCircle.area())
+
+
+const shapeSquare = new Shape(square)
+log(`Area of Circle =` + shapeSquare.area())
+
+
+
+
+
+
+
+
+
 
