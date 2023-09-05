@@ -261,6 +261,24 @@ compositeb.attach(compositeA)
 leafB.method()
 compositeb.method()
 
+log(' Composite Design usecases --------------------------------')
+import File from './composite/file'
+import Folder from './composite/folder'
+
+const file1 = new File('file1.ts');
+const file2 = new File('file1.js');
+
+const folderSrc = new Folder('src');
+const folderDist = new Folder('dist');
+
+folderSrc.attach(file1)
+folderDist.attach(file2)
+folderSrc.attach(folderDist)
+folderSrc.dir(' ')
+
+file2.detach()
+folderSrc.dir(' ')
+
 
 
 
