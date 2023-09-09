@@ -289,6 +289,19 @@ log(proxySubject.request())
 
 log(proxySubject.request())
 
+log(' Proxy Design usecase --------------------------------') 
+import Lion from './proxy/lion'
+const lion  = new Lion()
+lion.tellMeTheFuture()
+lion.tellMeYourForm()
+lion.tellMeTheFuture()
+lion.tellMeYourForm()
+lion.tellMeTheFuture()
+lion.tellMeYourForm()
+lion.tellMeTheFuture()
+lion.tellMeYourForm()
+lion.tellMeTheFuture()
+lion.tellMeYourForm()
 
 
 
