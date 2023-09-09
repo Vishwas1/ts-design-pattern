@@ -280,8 +280,14 @@ file2.detach()
 folderSrc.dir(' ')
 
 
+// ----------------------------  Proxy Pattern ------------------------------------
+log(' Proxy Design concepts --------------------------------')
+import { ProxySubject } from "./proxy/proxy-concept"
 
+const proxySubject = new ProxySubject()
+log(proxySubject.request())
 
+log(proxySubject.request())
 
 
 
