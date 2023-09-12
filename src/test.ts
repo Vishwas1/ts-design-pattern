@@ -330,6 +330,25 @@ SWITCH.showHistory()
 
 SWITCH.replayLast(1)
 
+// ----------------------------  Observer Pattern ------------------------------------
+log(' Observer Design concepts --------------------------------') 
+
+import {Subject, Observer } from './observer/observer-concepts'
+
+
+const sub = new Subject()
+const ob1 = new Observer(sub)
+const ob2 = new Observer(sub)
+
+sub.notify('First Notification', [1,2,3])
+
+sub.unsubscribe(ob1)
+
+sub.notify('2nd Notification', {'userID': 123})
+
+
+
+
 
 
 
