@@ -306,6 +306,32 @@ lion.tellMeYourForm()
 
 
 
+// ----------------------------  Command Pattern ------------------------------------
+import Light from './command/light'
+import SwitchOffCommand from "./command/switchoffcomamnd"
+import SwitchOnCommand from "./command/switchoncomamnd"
+import Switch from './command/switch'
+
+const light = new Light()
+const switchoffcomamnd = new SwitchOffCommand(light)
+const switchoncomamnd = new SwitchOnCommand(light)
+
+const SWITCH = new Switch()
+SWITCH.register('on', switchoncomamnd)
+SWITCH.register('off', switchoffcomamnd)
+
+SWITCH.execute('on')
+SWITCH.execute('on')
+SWITCH.execute('off')
+SWITCH.execute('off')
+SWITCH.execute('on')
+
+SWITCH.showHistory()
+
+SWITCH.replayLast(1)
+
+
+
 
 
 
